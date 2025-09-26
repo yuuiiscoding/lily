@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>1</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Carbohydrates and Insulin Calculator</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+  <h2>⋆｡‧˚ʚ Lily’s Calculator ɞ˚‧｡⋆</h2>
+
+  <!-- الطريقة 1: لكل 100 غ -->
+  <section>
+    <h3> حساب الكاربوهيدرات (لكل 100غ)</h3>
+    <label>الوزن (غ):</label>
+    <input type="number" id="weight1" ><br>
+    <label>كمية الكارب لكل 100غ (غ):</label>
+    <input type="number" id="carbPer100" ><br>
+    <button onclick="calcCarb100()">احسب</button>
+    <div class="result" id="result1"></div>
+  </section>
+
+  <h4>━━━━━•❃°•°•°•°❃•━━━━━<h4>
+
+  <!-- الطريقة 3: من الملصق الغذائي -->
+  <section>
+    <h3>  حساب الكاربوهيدرات (من الملصق الغذائي)</h3>
+
+    <label><input type="radio" name="labelMode" value="full" checked> كامل المنتج</label>
+    <label><input type="radio" name="labelMode" value="part"> كمية محددة</label>
+    <br><br>
+
+    <label id="labelConsumedLabel">الوزن الصافي للمنتج (غ):</label>
+    <input type="number" id="labelConsumedWeight" ><br>
+
+    <label>الوزن المذكور في المعلومات الغذائية (غ):</label>
+    <input type="number" id="labelWeight" ><br>
+
+    <label>كمية الكاربوهيدرات المذكورة في الملصق (غ):</label>
+    <input type="number" id="labelCarb" ><br>
+
+    <button onclick="calcCarbLabel()">احسب </button>
+    <div class="result" id="result3"></div>
+  </section>
+
+  <h4>━━━━━•❃°•°•°•°❃•━━━━━<h4>
+
+  <!-- الطريقة 4: جرعة الإنسولين -->
+  <section>
+    <h3> حساب جرعة الإنسولين</h3>
+    <label>مجموع الكاربوهيدرات (غ):</label>
+    <input type="number" id="totalCarb" placeholder="يمكن أن يُعبأ تلقائيًا"><br>
+    <label>معامل الكاربوهيدرات (ICR):</label>
+    <input type="number" id="ratio" ><br>
+    <button onclick="calcInsulin()">احسب وحدات الإنسولين</button>
+    <div class="result" id="result4"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
